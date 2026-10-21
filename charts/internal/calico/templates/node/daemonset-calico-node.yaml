@@ -442,10 +442,6 @@ spec:
             - name: FELIX_NFTABLESMODE
               value: "Enabled"
             {{- end }}
-            {{- if eq .Values.global.snatToUpstreamDNSEnabled "true" }}
-            - name: FELIX_CHAININSERTMODE
-              value: "Append"
-            {{- end }}
             {{- if .Values.config.ipv4.wireguard }}
             - name: FELIX_WIREGUARDENABLED
               value: "true"
